@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class DirectivesPageComponent {
     title = 'Directives page'
+    subRoutes = [
+        {
+            label: 'introduction',
+            route: './introduction'
+        }
+    ]
 }

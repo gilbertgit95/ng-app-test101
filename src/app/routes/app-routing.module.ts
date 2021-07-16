@@ -6,7 +6,10 @@ import { ComponentIntroductionPageComponent } from './../pages/component-page/su
 import { ComponentDatabindingPageComponent } from './../pages/component-page/sub-pages/component-databinding-page/component-databinding-page.component';
 
 import { RoutingPageComponent } from './../pages/routing-page/routing-page.component';
+
 import { DirectivesPageComponent } from './../pages/directives-page/directives-page.component';
+import { DirectivesIntroductionPageComponent } from './../pages/directives-page/sub-pages/directives-introduction-page/directives-introduction-page.component';
+
 import { PipesPageComponent } from './../pages/pipes-page/pipes-page.component';
 import { ServicesPageComponent } from './../pages/services-page/services-page.component';
 import { ErrorPageComponent } from './../pages/error-page/error-page.component';
@@ -32,7 +35,13 @@ const routes: Routes = [
   },
   {
     path: 'directives',
-    component: DirectivesPageComponent
+    component: DirectivesPageComponent,
+    children: [
+      {
+        path: 'introduction',
+        component: DirectivesIntroductionPageComponent
+      }
+    ]
   },
   {
     path: 'pipes',
